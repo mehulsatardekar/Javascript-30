@@ -29,8 +29,3 @@ function getvalue(){
 
 inputs.forEach(input => input.addEventListener('change',getvalue) );
 inputs.forEach(input => input.addEventListener('mousemove',getvalue) );
-
-
-
-
-
