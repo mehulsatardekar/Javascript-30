@@ -58,3 +58,14 @@ console.log(findmyindex) // it didnt find element in array so returnde -1
 
 
 
+// delete the element from array
+
+const delme = ages.findIndex(age =>{
+    return (age===12) ? true :false
+})
+
+console.log(delme)
+
+ages.splice(delme,2);  //splice takes 2 param first one is starting and last one is ending position
+
+console.table(ages)
