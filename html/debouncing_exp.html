@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debouncing Exp</title>
+    <link rel="stylesheet" href="../css/debouncing_exp.css">
+</head>
+<body>
+    <header>Debouncing example with button</header>
+
+                 
+         <div class="text-information">
+             <textarea placeholder="type here" id="text-info-adder" cols="80" rows="10"></textarea>
+         </div>
+         <div class="group">
+          <button id="adder_cnt">Add content</button>
+         </div>
+        <div class="output-text">
+            <span id="text-op">text will be get added here</span>
+        </div>
+        
+
+        <kbd>Note : debouncing is a concept suppose you have cart option into that cart you have button
+            so what if user tries to click that button or it happen that button get clicked multiple time
+            so would you charge the user for single item twice? .. debouncing would be useful in performance
+            technique suppose where you have page and you have function that logs an every time you scroll it 
+            prints your x-axis this could be performance killer so thats why we use debouncing.
+            Here in this example on press button after 5sec it reflect changes so even if user try to add more
+            text it will reflect after 5 sec. it could be useful where we have to design searchbar and there 
+            using api with the debouncing we can limit the hits of api.
+        </kbd>
+    <script src="../js/debouncing_exp.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    
+}
+
+ .text-information{
+     display: flex;
+     justify-content: center;
+     margin-top: 30px;
+ }
+
+ header{
+     text-align: center;
+    font-size: 30px;
+    color: rgb(34, 33, 33);
+}
+
+
+
+.group{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 13px 13px 13px 13px;
+}
+
+.group #adder_cnt{
+    margin: 13px 13px 33px 13px;
+    padding: 10px 13px 10px 13px;
+    border-radius: 3px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-left: 5px rebeccapurple solid;
+    box-shadow:  3px 3px rgb(255, 0, 119);
+
+}
+
+
+
+
+.output-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.output-text > span{
+    
+    height: 30%;
+    border: 3px rebeccapurple solid;
+    font-size: medium;
+    margin-bottom: 30px;
+    padding: 12px 12px 12px 12px;
+}
