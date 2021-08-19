@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Delegation</title>
+    <style>
+        main{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        ul{
+            background-color: antiquewhite;
+            border: 3px rebeccapurple solid;
+            list-style: none;
+            padding: 23px 23px 23px 23px;
+           
+        }
+        li{
+            border-bottom: 3px black solid;
+            padding: 13px 13px 13px 13px;
+
+        }
+        h1{
+            color:rgb(17, 0, 255);
+        }
+        header > span{
+           color: blueviolet;
+           font-size: 300;
+        }
+        .li1{
+            background-color: blueviolet;
+        }
+        .li2{
+            background-color: rgb(226, 15, 33);
+        }.li3{
+            background-color: rgb(205, 226, 15);
+        }.li4{
+            background-color: rgb(15, 166, 226);
+        }
+
+
+        .root{
+            background-color: black;
+            height: 320px;
+            width: 320px;
+            display: flex;
+        }
+        .root > .leftchild{
+           background-color: rebeccapurple;
+           height: 320px;
+           width: 120px;
+        }
+        .root > .rightchild{
+           background-color: rgb(153, 51, 93);
+           height: 320px;
+           width: -20px;
+           padding-left: 120px;
+        }
+        .console{
+            margin-top: 13px;
+            margin-bottom: 23px;
+            font-size: larger;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>What is an Event Delegation?</h1>
+        <span>A way you can an event listener once for multiple elements with support for adding extra children</span>
+        <p>
+            <span>Why do we need it btw?</span>
+            <span>
+                1] it improves the web performance.
+                2] suppose you have ul item and inside it multipe li and you have a task  every time you click
+                on the list change the background color so imagine you go and adding a event-handler to every element that changes color?
+                insted of that pass the event to the parent element which is ul and it will pass the event to its children based on event 
+                you want this way we reduced lot of event handler call it increase the performance.
+                3] it works because of event propgation or bubbling, when we click on the li element it goes to up to the parent and listen
+                to the event and trigger the event.. so when we click the element on dom that travers up to the dom and listen to the event that
+                triggered (all the way up to the document level)
+            </span>
+        </p>
+    </header>
+    <main>
+        1] toggle background-color of list when we click using event_delegation
+    <ul class="list-items" id="one">
+        <li >Snacks</li>
+        <li>Kebabs</li>
+        <li>Tandoori</li>
+        <li>Chicken-handi</li>
+    </ul>
+    </main>
+
+
+    <main>
+         2] console when we click on boxes with the right name which box we have click
+        <div class="root">  
+           <div class="leftchild"></div>
+           <div class="rightchild"></div>
+        </div>
+        <div class="console"></div>
+    </main>
+
+    <script src="../js/event_delegation.js"></script>
+</body>
+</html>
